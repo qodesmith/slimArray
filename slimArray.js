@@ -18,7 +18,7 @@ var slimArray = function(array, order) {
 
     if(i === length - 1) { // If we're at the last element in the array.
       newArray.push(a);
-      return newArray.sort(eval(order)); // Return the new array in ascending / descending order.
+      return order ? newArray.sort(eval(order)) : newArray; // 'Oreder-or-not' logic.
     } else {
       for(var j = i + 1; j < length; j++) { // 'Compare' iteration loop.
         var b = array[j];
