@@ -4,7 +4,7 @@ Filters redundant / duplicate elements from arrays and returns them in an option
 ####*Usage:*####
 
 `slimArray([array], 'order');`  
-[array] = an array of numbers or strings.  
+[array] is an array of numbers or strings.  
 'order' is optional and can be one of two options, both of which are strings:  
   1. *asc:* - sorts the array in ascending order
   2. *desc:* - sorts the array in descending order

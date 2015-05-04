@@ -1,7 +1,10 @@
 var slimArray = function(array, order) {
+  // Some array-checking logic.
+  if(array.constructor.name != 'Array') {return 'You didn\'t give me an array.'};
+  if(array.length === 0) {return array};
 
   var length    = array.length,
-      isFound  = false;
+      isFound  = false,
       newArray = [];
 
   var asc = function(a,b) {
