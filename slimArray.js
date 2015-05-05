@@ -3,7 +3,7 @@ var slimArray = function(array, order) {
   if(array.constructor.name != 'Array') {return 'You didn\'t give me an array.'};
   if(array.length === 0) {return array};
 
-  var length    = array.length,
+  var length   = array.length,
       isFound  = false,
       newArray = [];
 
