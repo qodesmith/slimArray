@@ -13,7 +13,7 @@ Filters redundant / duplicate elements from arrays and returns them in an option
 ####*Examples:*####
 ```
 numbers = [3, 1, 10, 3, 10, 2, 100];
-slimArray(numbers) => [1, 3, 10, 2, 100]
+slimArray(numbers) => [3, 1, 10, 2, 100]
 slimArray(numbers, 'asc') => [1, 2, 3, 10, 100]
 slimArray(numbers, 'desc') => [100, 10, 3, 2, 1]
 

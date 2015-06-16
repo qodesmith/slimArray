@@ -1,38 +1,31 @@
 var slimArray = function(array, order) {
   var length   = array.length,
-      isFound  = false,
       newArray = [];
 
   // Some array-checking logic.
   if(array.constructor.name != 'Array') { return 'You didn\'t give me an array.'; }
   if(length === 0) { return array; }
 
-  var asc = function(a,b) {
-    return a > b;
-  };
-
-  var desc = function(a,b) {
-    return a < b;
-  };   
+  // Order sorting functions.
+  function asc(a,b) { return a > b; };
+  function desc(a,b) { return a < b; };
   
+  // Supplied array iteration.
   for(var i = 0; i < length; i++) {
-    isFound = false; // Reset isFound on each iteration.
     var a = array[i];
 
-    if(i === length - 1) { // If we're at the last element in the array.
-      newArray.push(a);
-      return order ? newArray.sort(eval(order)) : newArray; // 'Ordered-or-not' logic.
-    } else {
-      for(var j = i + 1; j < length; j++) { // 'Compare' iteration loop.
-        var b = array[j];
-        if(a === b) { isFound = true; }
-        if(j === length - 1) { // If we're at the last comparison,
-          if(!isFound) { // and no match has been found,
-            newArray.push(a) // push the compared.
-          }
-        }
+    // If newArray is empty, push 'a' into it.
+    if(newArray.length === 0) { newArray.push(a); }
+
+    // Check supplied array against newArray.
+    for(var j = 0; j < newArray.length; j ++) {
+      if(a === newArray[j]) { // If we find a match, break this loop.
+        break;
+      } else if(j === newArray.length - 1) { // If no match has been found, push 'a' into newArray
+        newArray.push(a);
       }
     }
-
   }
+
+  return order ? newArray.sort(eval(order)) : newArray; // 'Ordered-or-not' logic.
 };
