@@ -7,8 +7,8 @@ var slimArray = function(array, order) {
   if(length === 0) { return array; }
 
   // Order sorting functions.
-  function asc(a,b) { return a > b; };
-  function desc(a,b) { return a < b; };
+  function asc(a,b) { return a - b; };
+  function desc(a,b) { return b - a; };
   
   // Supplied array iteration.
   for(var i = 0; i < length; i++) {
