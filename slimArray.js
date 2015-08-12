@@ -4,18 +4,18 @@ var slimArray = function(array, order) {
 
   // Some array-checking logic.
   if(array.constructor.name != 'Array') { return 'You didn\'t give me an array.'; }
-  if(length === 0) { return array; }
+  if(!length) { return array };
 
   // Order sorting functions.
-  function asc(a,b) { return a - b; };
-  function desc(a,b) { return b - a; };
-  
+  function asc(a,b) { return a - b };
+  function desc(a,b) { return b - a };
+
   // Supplied array iteration.
   for(var i = 0; i < length; i++) {
     var a = array[i];
 
     // If newArray is empty, push 'a' into it.
-    if(newArray.length === 0) { newArray.push(a); }
+    if(!newArray.length) { newArray.push(a) };
 
     // Check supplied array against newArray.
     for(var j = 0; j < newArray.length; j ++) {
