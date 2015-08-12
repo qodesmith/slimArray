@@ -3,7 +3,7 @@ var slimArray = function(array, order) {
       newArray = [];
 
   // Some array-checking logic.
-  if(array.constructor.name != 'Array') { return 'You didn\'t give me an array.'; }
+  if(array.constructor.name !== 'Array') { return 'You didn\'t give me an array.' };
   if(!length) { return array };
 
   // Order sorting functions.
