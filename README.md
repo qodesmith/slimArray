@@ -1,7 +1,7 @@
 # slimArray
 Filters redundant / duplicate elements from arrays and returns them in an optional order.
 
-####*Usage:*####
+####Usage:####
 
 `slimArray([array], 'order');`
 [array] is an array of numbers or strings.
@@ -10,7 +10,7 @@ Filters redundant / duplicate elements from arrays and returns them in an option
   2. *desc:* - sorts the array in descending order
 
 
-####*Examples:*####
+####Examples:####
 ```
 numbers = [3, 1, 10, 3, 10, 2, 100];
 slimArray(numbers) => [3, 1, 10, 2, 100]
